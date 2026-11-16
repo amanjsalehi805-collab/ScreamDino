@@ -1,4 +1,5 @@
-plugins {
+p^o
+lugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
 }
@@ -17,8 +18,8 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = true
-            isShrinkResources = true
+            isMinifyEnabled = false
+            isShrinkResources = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
             // Signed with the auto-generated debug key so the APK installs directly.
             // For Play Store publishing, replace with your own release keystore.
@@ -35,3 +36,4 @@ android {
         checkReleaseBuilds = false
     }
 }
+
