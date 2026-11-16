@@ -25,9 +25,13 @@ jobs:
         with:
           gradle-version: 8.9
 
-      - run: gradle assembleRelease --no-daemon
+      - name: Build APKs
+        run: gradle assembleDebug assembleRelease --no-daemon
 
       - uses: actions/upload-artifact@v4
         with:
-          name: ScreamDino-APK
-          path: app/build/outputs/apk/release/*.apk
+          name: ScreamDino-APKs
+          path: |
+            app/build/outputs/apk/debug/*.apk
+            app/build/outputs/apk/release/*.apk
+
